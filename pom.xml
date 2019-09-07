@@ -14,6 +14,12 @@
         <version>2.1.8.RELEASE</version>
     </parent>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <protobuf.version>3.9.1</protobuf.version>
+        <snappy.version>1.1.7</snappy.version>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -21,6 +27,27 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>${snappy.version}</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 当运行“mvn package”进行打包时，会打包成一个可以直接运行的 JAR 文件，使用“java -jar”命令就可以直接运行 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
