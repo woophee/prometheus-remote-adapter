@@ -1,3 +1,13 @@
+/.project
+/.settings/
+/.idea/
+/*.iml
+/*.classpath
+/logs/
+/target/
+/*/target/
+/build/
+
 # Compiled class file
 *.class
 
