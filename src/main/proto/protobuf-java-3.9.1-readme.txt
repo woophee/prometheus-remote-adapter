@@ -1,0 +1,2 @@
+protoc --java_out=. remote.proto
+protoc --java_out=. types.proto
