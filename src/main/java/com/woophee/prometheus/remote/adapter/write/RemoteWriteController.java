@@ -14,7 +14,7 @@ public class RemoteWriteController {
     @Autowired
     private RemoteWriteService remoteWriteService;
 
-    @RequestMapping(value="/write",method= RequestMethod.GET)
+    @RequestMapping(value="/write",method= RequestMethod.POST)
     public void write(@RequestBody byte[] data){
         remoteWriteService.write(data);
     }
